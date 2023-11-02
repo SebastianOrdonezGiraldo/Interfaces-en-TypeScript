@@ -1,18 +1,17 @@
-interface user{
+interface users{
     id: number;
     name: string;
-    email: string;
-
+    
 }
-interface Admin extends user {
+interface Admin extends users {
     tipo: "Admin";
     role: string;
   }
-interface User extends user {
+interface User extends users {
     tipo: "User";
   }
-  function imprimirUsuario(user: user) {
+  function imprimirUsuario(user: users) {
     console.log(`Nombre: ${user.name}`);
     console.log(`id: ${user.id}`);
-    console.log(`Email: ${user.email}`);
+    
 }
